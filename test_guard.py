@@ -12,8 +12,8 @@ class TestForward(TestCase):
     def setUp(self):
         """ Sets up data and calls logPoint """
         self.logPoint()
-        self.player_manager = PlayerManager("Los Angeles Lakers")
-        self.player1 = Guard(1, "Rajon", "Rondo", 190, 76, 2004, 909, 1203)
+        self.player_manager = PlayerManager("Los Angeles Lakers", "file.txt")
+        self.player1 = Guard(1, "Rajon", "Rondo", 190, 76, 2004, "guard", 909, 1203)
         self.player_manager.add_player(self.player1)
         self.assertIsNotNone(self.player_manager)
     

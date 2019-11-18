@@ -12,8 +12,8 @@ class TestCenter(TestCase):
     def setUp(self):
         """ Sets up data and calls logPoint """
         self.logPoint()
-        self.player_manager = PlayerManager("Los Angeles Lakers")
-        self.player1 = Forward(1, "Lebron", "James", 201, 81, 2003, 1028, 690)
+        self.player_manager = PlayerManager("Los Angeles Lakers", "file.txt")
+        self.player1 = Forward(1, "Lebron", "James", 201, 81, 2003, "forward", 1028, 690)
         self.player_manager.add_player(self.player1)
         self.assertIsNotNone(self.player_manager)
     

@@ -38,3 +38,14 @@ class PlayerStats:
     def get_avg_years_played(self):
         """ Returns the average years played """
         return self._avg_years_played
+
+    def to_dict(self):
+        """ Returns a dictionary representation of a player """
+        dict = {}
+        dict['total_num_players'] = self._total_num_players
+        dict['num_guards'] = self._num_guards
+        dict['num_forwards'] = self._num_forwards
+        dict['num_centers'] = self._num_centers
+        dict['avg_years_played'] = self._avg_years_played
+
+        return dict

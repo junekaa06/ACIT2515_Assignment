@@ -12,8 +12,8 @@ class TestCenter(TestCase):
     def setUp(self):
         """ Sets up data and calls logPoint """
         self.logPoint()
-        self.player_manager = PlayerManager("Los Angeles Lakers")
-        self.player2 = Center(1, "Dwight", "Howard", 210, 90, 2002, 1054, "Aggresive")
+        self.player_manager = PlayerManager("Los Angeles Lakers", "file.txt")
+        self.player2 = Center(1, "Dwight", "Howard", 210, 90, 2002, "center", 1054, "Aggresive")
         self.player_manager.add_player(self.player2)
         self.assertIsNotNone(self.player_manager)
     
